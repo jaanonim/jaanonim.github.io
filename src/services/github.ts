@@ -3,11 +3,13 @@ import config from "./repos.json";
 async function getRepos() {
     console.log("Fetching data from github...");
 
-    const OPTIONS = {
-        headers: {
-            Authorization: `Bearer ${import.meta.env.GITHUB_API}`,
-        },
-    };
+    const OPTIONS = import.meta.env.GITHUB_API
+        ? {
+              headers: {
+                  Authorization: `Bearer ${import.meta.env.GITHUB_API}`,
+              },
+          }
+        : {};
 
     const res = await fetch(
         "https://api.github.com/users/jaanonim/repos",
