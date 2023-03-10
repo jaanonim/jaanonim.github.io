@@ -1,7 +1,8 @@
 {
-  "name": "@example/basics",
+  "name": "jaanonim",
+  "description": "My portfolio website.",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -11,10 +12,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.9.0",
-    "astro-icon": "^0.8.0"
+    "@astrojs/mdx": "^0.11.1",
+    "@astrojs/rss": "^1.0.1",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/tailwind": "^3.0.0",
+    "astro": "^2.0.0",
+    "daisyui": "^2.27.0",
+    "dayjs": "^1.11.7"
   },
   "devDependencies": {
-    "sass": "^1.57.1"
+    "@tailwindcss/typography": "^0.5.7"
   }
 }

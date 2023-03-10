@@ -1,0 +1,19 @@
+---
+import HorizontalCard from "./HorizontalCard.astro";
+
+const { repos } = Astro.props;
+---
+
+{
+    repos.map((repo) => (
+        <>
+            <HorizontalCard
+                title={repo.name}
+                desc={repo.description}
+                url={repo.html_url}
+                tags={[repo.language]}
+                badge={repo.badge}
+            />
+        </>
+    ))
+}

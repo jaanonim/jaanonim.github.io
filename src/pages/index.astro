@@ -1,55 +1,32 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getTopRepos } from "../services/github";
+import ProjectsList from "../components/ProjectsList.astro";
+
+const repos = await getTopRepos();
 ---
 
-<Layout title="Jaanonim">
-    <header>
-        <h2>Hi!</h2>
-        <p>I'm Mateusz.</p>
-    </header>
-    <section>
-        <p>
-            I live in Krakow and I am student. My favorite color is blue which
-            you can see from the appearance of this page.
-        </p>
-    </section>
-    <section>
-        <p>
-            I am also a programmer. I wrote in many languages. Currently my main
-            language is <strong>Python</strong>
-            but I wrote a lot in <strong>C++</strong>, <strong>PHP</strong>, <strong
-                >C#</strong
-            > and I recently learned basics of
-            <strong>Java</strong>. I also wrote mobile applications with <strong
-                >Flutter</strong
-            > and android games in <strong>Unity</strong> engine (You can download
-            some of them <a
-                href="https://play.google.com/store/apps/developer?id=Stairs+Adventure+Studio"
-                target="_blanck">here</a
-            >).
-        </p>
-    </section>
-    <section>
-        <p>
-            I write webpages mainly using the <strong>React</strong>. On backend
-            I used
-            <strong>Django</strong>, <strong>Express.js</strong> or even <strong
-                >Strapi</strong
-            > and <strong>FastAPI</strong>. I have some expirers in using
-            <strong>Three.js</strong>. I'm also interested in electronics, more
-            specifically IoT and home automation.
-        </p>
-    </section>
-    <section>
-        <p>I'm currently writing my own 3D Engine in TypeScript.</p>
-    </section>
-    <section>
-        <p>
-            In free time I like go hiking in the mountains, fold origami and
-            ride a bicycle. Also, I know how to arrange Rubik's cube and
-            recently I am learning to play the guitar.
-        </p>
-    </section>
-</Layout>
+<BaseLayout>
+    <div class="pb-12 mt-5">
+        <div class="text-xl py-1">Hey there 👋</div>
+        <div class="text-5xl font-bold">I'm Mateusz</div>
+        <div class="text-3xl py-3 font-bold">Just student for now</div>
+        <div class="py-2">
+            <text class="text-lg">
+                This page is work in progress so this text isn't written yet...
+            </text>
+        </div>
+        <div class="mt-8">
+            <a class="btn" href="#" target="_blank"> Just some epmty button</a>
+        </div>
+    </div>
 
-<style></style>
+    <div>
+        <div class="text-3xl w-full font-bold mb-2">
+            My last projects {"</>"}
+        </div>
+    </div>
+
+    <ProjectsList repos={repos} />
+</BaseLayout>

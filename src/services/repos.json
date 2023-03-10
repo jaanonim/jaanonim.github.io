@@ -1,0 +1,23 @@
+{
+    "exclude": [
+        "jaanonim.github.io",
+        "jaanonim",
+        "SimpleHttp",
+        "OpenLP-songs",
+        "email-service-backend",
+        "email-service-frontend"
+    ],
+    "include": [
+        "n2oneProgrammer/PathOfDice",
+        "Dudek03/GryllotalpaBot",
+        "n2oneProgrammer/sync_directories_app"
+    ],
+    "overwrite": {
+        "n2oneProgrammer/PathOfDice": {
+            "description": "Simple logic game created during GMTK Game Jam 2022. The Player follows a path with a dice and tries to reach following levels."
+        },
+        "Dudek03/GryllotalpaBot": {
+            "badge": "CURRENT"
+        }
+    }
+}
