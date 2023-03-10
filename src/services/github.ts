@@ -12,7 +12,7 @@ async function getRepos() {
         : {};
 
     const res = await fetch(
-        "https://api.github.com/users/jaanonim/repos",
+        "https://api.github.com/users/jaanonim/repos?per_page=100",
         OPTIONS
     );
     const default_data = await res.json();
@@ -30,7 +30,7 @@ async function getRepos() {
     );
     let data = [...default_data, ...included];
 
-    data = data.filter((ele) => !config.exclude.some((n) => n == ele.name));
+    data = data.filter((ele) => !config.exclude.some((n) => n === ele.name));
 
     for (const [key, value] of Object.entries(config.overwrite)) {
         data = data.map((ele) => {

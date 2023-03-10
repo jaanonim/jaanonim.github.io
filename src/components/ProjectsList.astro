@@ -13,6 +13,7 @@ const { repos } = Astro.props;
                 url={repo.html_url}
                 tags={[repo.language]}
                 badge={repo.badge}
+                page={repo.has_pages}
             />
         </>
     ))

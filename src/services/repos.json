@@ -10,7 +10,10 @@
     "include": [
         "n2oneProgrammer/PathOfDice",
         "Dudek03/GryllotalpaBot",
-        "n2oneProgrammer/sync_directories_app"
+        "n2oneProgrammer/sync_directories_app",
+        "CSSSTeam/CSSSBackend",
+        "Project-disABLEd/api",
+        "Fundacyjni/backend"
     ],
     "overwrite": {
         "n2oneProgrammer/PathOfDice": {
@@ -18,6 +21,22 @@
         },
         "Dudek03/GryllotalpaBot": {
             "badge": "CURRENT"
+        },
+        "n2oneProgrammer/sync_directories_app": {
+            "description": "Windows app for synchronizing file between two folders."
+        },
+        "jaanonim/Stairs-Adventure": {
+            "language": "C#"
+        },
+        "CSSSTeam/CSSSBackend": {
+            "pushed_at": "2020-09-28T15:30:27Z"
+        },
+        "Project-disABLEd/api": {
+            "name": "disABLEd-backed"
+        },
+        "Fundacyjni/backend": {
+            "name": "Fundacyjni-backed",
+            "description": "Backed for Fundacyjni project"
         }
     }
 }

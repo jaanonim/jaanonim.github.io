@@ -1,5 +1,14 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+const {
+    title,
+    img,
+    desc,
+    url,
+    page,
+    badge,
+    tags,
+    target = "_blank",
+} = Astro.props;
 ---
 
 <div
@@ -21,7 +30,7 @@ const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
                     {title}
                     {
                         badge && (
-                            <div class="badge badge-secondary mx-2">
+                            <div class="badge badge-secondary mx-2 p-3">
                                 {badge}
                             </div>
                         )
@@ -29,10 +38,11 @@ const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
                 </h1>
                 <p class="py-1 text-1xl">{desc}</p>
                 <div class="card-actions justify-end">
+                    {page && <div class="badge badge-primary p-3">page</div>}
                     {
                         tags &&
                             tags.map((tag) => (
-                                <div class="badge badge-outline">{tag}</div>
+                                <div class="badge badge-outline p-3">{tag}</div>
                             ))
                     }
                 </div>
