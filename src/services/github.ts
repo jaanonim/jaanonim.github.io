@@ -57,5 +57,7 @@ export async function getAllRepos() {
 }
 
 export async function getTopRepos() {
-    return (await REPOS).slice(0, 3);
+    return (await REPOS)
+        .filter((ele) => config.top.some((n) => n === ele.full_name))
+        .slice(0, 3);
 }

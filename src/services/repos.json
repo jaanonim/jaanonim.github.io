@@ -38,5 +38,10 @@
             "name": "Fundacyjni-backed",
             "description": "Backed for Fundacyjni project"
         }
-    }
+    },
+    "top": [
+        "jaanonim/3d-game-engine-canvas",
+        "jaanonim/songbook",
+        "n2oneProgrammer/sync_directories_app"
+    ]
 }
