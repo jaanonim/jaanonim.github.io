@@ -1,0 +1,60 @@
+---
+---
+
+<a href="/" class="back">
+    <span class="back-arrow"></span>
+</a>
+
+<style lang="sass">
+    @use '../styles/colors.sass'
+
+    .back
+        position: fixed
+        top: 2rem
+        left: 2rem
+        height: 3rem
+        width: 3rem
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+        &-arrow
+            display: block
+            width: 2rem
+            height: 2rem
+            position: relative
+            transition: all 0.5s ease-in-out
+
+            &::before
+                background-color: colors.$font-color
+                content: " "
+                width: 0.2rem
+                height: 2rem
+                z-index: 2
+                position: absolute
+                top: 0.5rem
+                left: 0.75rem
+                transform: rotate(120deg)
+                border-bottom-right-radius: 0.1rem
+
+            &::after
+                background-color: colors.$font-color
+                content: " "
+                width: 0.2rem
+                height: 2rem
+                z-index: 2
+                position: absolute
+                bottom: 0.5rem
+                left: 0.75rem
+                transform: rotate(-120deg)
+                border-bottom-left-radius: 0.1rem
+
+        &:hover &-arrow
+            transform: scale(1.1)
+
+        &:hover &-arrow::after
+            background: -webkit-linear-gradient(-90deg , colors.$primary, colors.$font-color)
+        &:hover &-arrow::before
+            background: -webkit-linear-gradient(-90deg , colors.$font-color, colors.$primary)
+</style>

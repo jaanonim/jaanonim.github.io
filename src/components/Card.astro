@@ -1,21 +1,105 @@
 ---
-const { title, img, desc, url, badge, tags, target = '_blank' } = Astro.props;
+const {
+    title,
+    img,
+    desc,
+    url,
+    page,
+    badge,
+    tags,
+    target = "_blank",
+} = Astro.props;
 ---
 
-<div class="md:w-1/3 w-full">
-  <a href={url} target={target}>
-    <div class="card bg-base-100 transition ease-in-out hover:shadow-xl mx-6 my-2 hover:scale-[102%]">
-      <figure><img src={img} alt="Shoes" /></figure>
-      <div class="card-body">
-        <h2 class="card-title">
-          {title}
-          {badge && <div class="badge badge-secondary">{badge}</div>}
-        </h2>
-        <p>{desc}</p>
-        <div class="card-actions justify-end">
-          {tags && tags.map((tag) => <div class="badge badge-outline">{tag}</div>)}
+<div class="card">
+    <a href={url} target={target} class="card-link">
+        <div class="card-header">
+            <div class="card-header-title">
+                {title}
+            </div>
+            <!-- {badge && <div class="card-header-badge">{badge}</div>} -->
         </div>
-      </div>
-    </div>
-  </a>
+
+        <p class="card-description">{desc}</p>
+        <div class="card-footer">
+            {
+                page && (
+                    <div class="card-footer-badge card-footer-badge-primary">
+                        <span>Page</span>
+                    </div>
+                )
+            }
+            {
+                tags &&
+                    tags.map((tag) => (
+                        <div class="card-footer-badge">{tag}</div>
+                    ))
+            }
+        </div>
+    </a>
 </div>
+
+<style lang="sass">
+    @use '../styles/colors.sass'
+
+    .card
+        margin: 3rem auto
+        width: clamp(50ch, 60%, 90ch)
+        padding: 0.5rem
+
+        border: transparent solid 1px
+        border-bottom: colors.$font-color solid 1px
+        position: relative
+        z-index: 1
+
+        &-link
+            text-decoration: none
+            color: colors.$font-color
+
+        &-header
+            width: 100%
+            &-title
+                font-size: 1.5rem
+                letter-spacing: 0.2rem
+                font-weight: bold
+        &-description
+            width: clamp(45ch, 100%, 75ch)
+            text-align: justify
+            line-height: 1.5rem
+            margin: 1rem 0 0.5rem 0
+
+        &-footer
+            width: 100%
+            display: flex
+            justify-content: flex-end
+            margin-bottom: 0.5rem
+
+            &-badge
+                display: inline-block
+                padding: 0.5rem
+                margin: 0 0.5rem
+                background-color: colors.$secondary
+
+                &-primary span
+                    background: -webkit-linear-gradient(135deg, colors.$font-color, colors.$primary)
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
+
+        &:hover &-header-title
+            background: -webkit-linear-gradient(135deg, colors.$font-color, colors.$primary)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+
+        &:hover::before
+            cursor: pointer
+            position: absolute
+            pointer-events: none
+            z-index: 0
+            content: ""
+            width: 100%
+            height: 100%
+            background-position-y: -1px
+            bottom: -1px
+            left: 0
+            background: -webkit-linear-gradient(-90deg, transparent, rgba(255,255,255,.1))
+</style>

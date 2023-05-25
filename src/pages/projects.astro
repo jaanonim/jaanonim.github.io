@@ -3,16 +3,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE_TITLE } from "../config";
 import { getAllRepos } from "../services/github";
 import ProjectsList from "../components/ProjectsList.astro";
+import BackButton from "../components/BackButton.astro";
 
 const repos = await getAllRepos();
 ---
 
 <BaseLayout title={`${SITE_TITLE} - Projects`}>
-    <div>
-        <div class="text-3xl w-full font-bold mb-5">
-            My projects from github:
-        </div>
-    </div>
+    <BackButton />
+    <div class="projects-title">My projects from github:</div>
 
     <ProjectsList repos={repos} />
 </BaseLayout>

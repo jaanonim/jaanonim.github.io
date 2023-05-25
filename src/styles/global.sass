@@ -1,0 +1,181 @@
+
+@use './colors.sass'
+
+html 
+    scroll-behavior: smooth
+
+body
+    margin: 0
+    padding: 0
+    color: colors.$font-color
+    background-color: colors.$background
+    font-family: monospace
+    font-size: 1rem
+    
+.hero
+    background-color: colors.$background
+    width: 100%
+    height: 100vh
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    &-title
+        font-size: 2rem
+        letter-spacing: 0.5rem
+        margin-bottom: 1rem
+
+    &-subtitle
+        font-size: 5rem
+        letter-spacing: 0.2rem
+
+        // &-accent
+        //     background: -webkit-linear-gradient(135deg, colors.$font-color, colors.$primary)
+        //     -webkit-background-clip: text
+        //     -webkit-text-fill-color: transparent
+
+    
+    &-description
+        margin-top: 1rem
+        font-size: 1rem
+
+    &-down
+        position: absolute
+        bottom: 0.5rem
+        width: 3rem
+        height: 3rem
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+
+        &-arrow
+            display: block
+            width: 2rem
+            height: 2rem
+            position: relative
+            transition: all 0.5s ease-in-out
+            animation: arrow-anim 1s infinite 
+
+            &::before
+                background-color: colors.$font-color
+                content: " "
+                width: 0.2rem
+                height: 2rem
+                z-index: 2
+                position: absolute
+                bottom: 0
+                left: 0.43rem
+                transform: rotate(-30deg)
+                border-bottom-right-radius: 0.1rem
+
+            &::after
+                background-color: colors.$font-color
+                content: " "
+                width: 0.2rem
+                height: 2rem
+                z-index: 2
+                position: absolute
+                bottom: 0
+                right: 0.43rem
+                transform: rotate(30deg)
+                border-bottom-left-radius: 0.1rem
+                
+
+        &:hover &-arrow::before
+            background: -webkit-linear-gradient(-90deg , colors.$font-color, colors.$primary)
+        &:hover &-arrow::after
+            background: -webkit-linear-gradient(-90deg , colors.$font-color, colors.$primary)
+
+.description
+    background-color: colors.$secondary
+    min-height: 50vh
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    p
+        line-height: 1.5rem
+        width: clamp(45ch, 50%, 75ch)
+        text-align: justify
+
+.button
+    display: inline-block
+    color: colors.$font-color
+    text-decoration: none
+    border: colors.$font-color 1px solid
+    padding: 1rem
+    transition: all 0.2s
+
+.button:focus
+    outline: none
+
+.button:hover
+    background: rgba(0, 0, 0, 0.3)
+       
+    span
+        background: -webkit-linear-gradient(135deg, colors.$font-color, colors.$primary)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+
+.projects
+    background-color: colors.$background 
+    min-height: 50vh
+    &-title
+       text-align: center
+       font-size: 2rem
+       margin: 3rem
+
+    &-center
+        text-align: center
+
+
+
+::-webkit-scrollbar 
+    width: 0.7rem
+
+
+::-webkit-scrollbar-track 
+    background: rgba(0, 0, 0, 0.2)
+
+
+::-webkit-scrollbar-thumb 
+    background: rgba(255, 255, 255, 0.3)
+
+
+::-webkit-scrollbar-thumb:hover 
+    background: rgba(255, 255, 255, 0.5)
+
+
+.about
+    text-align: center
+    min-height: 100vh
+
+    &-title
+       text-align: center
+       font-size: 2rem
+       margin: 3rem
+
+    &-comment
+        font-size: 0.8rem
+        margin: 2rem
+    & p
+        margin: 5rem auto
+        line-height: 1.5rem
+        width: clamp(45ch, 50%, 75ch)
+        text-align: justify
+
+        & a
+            color: colors.$font-color
+            text-decoration: underline
+
+            &:hover
+                background: -webkit-linear-gradient(135deg, colors.$font-color, colors.$primary)
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+

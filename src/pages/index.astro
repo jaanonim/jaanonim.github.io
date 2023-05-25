@@ -2,32 +2,43 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getTopRepos } from "../services/github";
 import ProjectsList from "../components/ProjectsList.astro";
+import AnimatedText from "../components/AnimatedText.astro";
 
 const repos = await getTopRepos();
 ---
 
 <BaseLayout>
-    <div class="pb-12 mt-5">
-        <div class="text-xl py-1">Hey there 👋</div>
-        <div class="text-5xl font-bold">I'm Mateusz</div>
-        <div class="text-3xl py-3 font-bold">Just student for now</div>
-        <div class="py-2">
-            <text class="text-lg">
-                I am a young student from Krakow. I'm interested in computer
-                science. This site was created as a kind of portfolio and as a
-                repository of projects that I have created or took a part in.
-            </text>
+    <header class="hero">
+        <div class="hero-title">Hey there 👋</div>
+        <div class="hero-subtitle">
+            I'm <AnimatedText text="Mateusz" />
+            <div class="hero-description">Just student for now</div>
         </div>
-        <div class="mt-8">
-            <a class="btn" href="about">Read more</a>
-        </div>
+        <a class="hero-down" href="#scroll">
+            <span class="hero-down-arrow"></span>
+        </a>
+    </header>
+
+    <div class="description" id="scroll">
+        <p>
+            I am a student from Krakow. I'm interested in computer science. This
+            site was created as a kind of portfolio and as a repository of
+            projects that I have created or took a part in.
+        </p>
+        <a class="button" href="about">
+            <span>Read more</span>
+        </a>
     </div>
 
-    <div>
-        <div class="text-3xl w-full font-bold mb-2">
-            My most interesting projects:
+    <div class="projects">
+        <div class="projects-title">My most interesting projects:</div>
+
+        <ProjectsList repos={repos} />
+
+        <div class="projects-center">
+            <a class="button" href="projects">
+                <span>All projects</span>
+            </a>
         </div>
     </div>
-
-    <ProjectsList repos={repos} />
 </BaseLayout>
