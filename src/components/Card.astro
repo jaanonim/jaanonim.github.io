@@ -44,7 +44,7 @@ const {
 
     .card
         margin: 3rem auto
-        width: clamp(50ch, 60%, 90ch)
+        width: clamp(30ch, 60%, 90ch)
         padding: 0.5rem
 
         border: transparent solid 1px
@@ -62,8 +62,11 @@ const {
                 font-size: 1.5rem
                 letter-spacing: 0.2rem
                 font-weight: bold
+                overflow: hidden
+                text-overflow: ellipsis
+
         &-description
-            width: clamp(45ch, 100%, 75ch)
+            width: clamp(30ch, 100%, 75ch)
             text-align: justify
             line-height: 1.5rem
             margin: 1rem 0 0.5rem 0

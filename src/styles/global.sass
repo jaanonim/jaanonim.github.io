@@ -2,19 +2,23 @@
 @use './colors.sass'
 
 html 
+    margin: 0
+    padding: 0
     scroll-behavior: smooth
 
 body
     margin: 0
     padding: 0
+    width: 100vw
     color: colors.$font-color
     background-color: colors.$background
     font-family: monospace
-    font-size: 1rem
+    font-size: 14px
+    overflow-x: hidden 
     
 .hero
     background-color: colors.$background
-    width: 100%
+    width: 100vw
     height: 100vh
     text-align: center
     display: flex
@@ -28,13 +32,11 @@ body
         margin-bottom: 1rem
 
     &-subtitle
-        font-size: 5rem
+        font-size: 3rem
         letter-spacing: 0.2rem
+        @media (min-width: 660px)
+            font-size: 5rem
 
-        // &-accent
-        //     background: -webkit-linear-gradient(135deg, colors.$font-color, colors.$primary)
-        //     -webkit-background-clip: text
-        //     -webkit-text-fill-color: transparent
 
     
     &-description
@@ -97,10 +99,12 @@ body
     align-items: center
     justify-content: center
     flex-direction: column
+    padding-bottom: 2rem
 
     p
         line-height: 1.5rem
-        width: clamp(45ch, 50%, 75ch)
+        width: clamp(30ch, 50%, 75ch)
+        margin: 2rem 0
         text-align: justify
 
 .button
