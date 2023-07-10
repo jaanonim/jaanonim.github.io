@@ -13,14 +13,12 @@
         "n2oneProgrammer/sync_directories_app",
         "CSSSTeam/CSSSBackend",
         "Project-disABLEd/api",
-        "Fundacyjni/backend"
+        "Fundacyjni/backend",
+        "Dudek03/RaceArchitect"
     ],
     "overwrite": {
         "n2oneProgrammer/PathOfDice": {
             "description": "Simple logic game created during GMTK Game Jam 2022. The Player follows a path with a dice and tries to reach following levels."
-        },
-        "Dudek03/GryllotalpaBot": {
-            "badge": "CURRENT"
         },
         "n2oneProgrammer/sync_directories_app": {
             "description": "Windows app for synchronizing file between two folders."
@@ -37,6 +35,9 @@
         "Fundacyjni/backend": {
             "name": "Fundacyjni-backed",
             "description": "Backed for Fundacyjni project"
+        },
+        "Dudek03/RaceArchitect": {
+            "description": "Race architect is a simple puzzle game made for GMTK Game Jam 2023. Instead of plating through the stage you build it"
         }
     },
     "top": [
