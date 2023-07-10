@@ -5,7 +5,8 @@
         "SimpleHttp",
         "OpenLP-songs",
         "email-service-backend",
-        "email-service-frontend"
+        "email-service-frontend",
+        "Hide-teams-in-meet-popup"
     ],
     "include": [
         "n2oneProgrammer/PathOfDice",
@@ -38,6 +39,9 @@
         },
         "Dudek03/RaceArchitect": {
             "description": "Race architect is a simple puzzle game made for GMTK Game Jam 2023. Instead of plating through the stage you build it"
+        },
+        "jaanonim/Rider": {
+            "language": "C#"
         }
     },
     "top": [
