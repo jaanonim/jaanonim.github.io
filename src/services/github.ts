@@ -61,3 +61,11 @@ export async function getTopRepos() {
         .filter((ele) => config.top.some((n) => n === ele.full_name))
         .slice(0, 3);
 }
+
+export function getLanguages(repos: any[]) {
+    let langs = {};
+    repos.forEach((repo) => {
+        langs[repo.language] = 1;
+    });
+    return Object.keys(langs);
+}

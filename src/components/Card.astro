@@ -7,11 +7,12 @@ const {
     page,
     badge,
     tags,
+    language,
     target = "_blank",
 } = Astro.props;
 ---
 
-<div class="card">
+<div class="card" data-language={language}>
     <a href={url} target={target} class="card-link">
         <div class="card-header">
             <div class="card-header-title">
