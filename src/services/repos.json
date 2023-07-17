@@ -15,7 +15,8 @@
         "CSSSTeam/CSSSBackend",
         "Project-disABLEd/api",
         "Fundacyjni/backend",
-        "Dudek03/RaceArchitect"
+        "Dudek03/RaceArchitect",
+        "Rdzawa-Wewerka/GingerWorld"
     ],
     "overwrite": {
         "n2oneProgrammer/PathOfDice": {
