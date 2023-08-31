@@ -1,12 +1,13 @@
 {
     "exclude": [
-        "jaanonim.github.io",
-        "jaanonim",
-        "SimpleHttp",
-        "OpenLP-songs",
-        "email-service-backend",
-        "email-service-frontend",
-        "Hide-teams-in-meet-popup"
+        "jaanonim/jaanonim.github.io",
+        "jaanonim/jaanonim",
+        "jaanonim/SimpleHttp",
+        "jaanonim/OpenLP-songs",
+        "jaanonim/email-service-backend",
+        "jaanonim/email-service-frontend",
+        "jaanonim/Hide-teams-in-meet-popup",
+        "jaanonim/obsidian-releases"
     ],
     "include": [
         "n2oneProgrammer/PathOfDice",
@@ -15,8 +16,7 @@
         "CSSSTeam/CSSSBackend",
         "Project-disABLEd/api",
         "Fundacyjni/backend",
-        "Dudek03/RaceArchitect",
-        "Rdzawa-Wewerka/GingerWorld"
+        "Dudek03/RaceArchitect"
     ],
     "overwrite": {
         "n2oneProgrammer/PathOfDice": {
@@ -43,6 +43,9 @@
         },
         "jaanonim/Rider": {
             "language": "C#"
+        },
+        "jaanonim/obsidian-youversion-linker": {
+            "language": "TypeScript"
         }
     },
     "top": [

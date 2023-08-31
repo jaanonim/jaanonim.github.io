@@ -30,7 +30,9 @@ async function getRepos() {
     );
     let data = [...default_data, ...included];
 
-    data = data.filter((ele) => !config.exclude.some((n) => n === ele.name));
+    data = data.filter(
+        (ele) => !config.exclude.some((n) => n === ele.full_name)
+    );
 
     for (const [key, value] of Object.entries(config.overwrite)) {
         data = data.map((ele) => {
