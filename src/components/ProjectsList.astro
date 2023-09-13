@@ -2,22 +2,26 @@
 import { getLanguages } from "../services/github";
 import Card from "./Card.astro";
 
-const { repos , filter} = Astro.props;
+const { repos, filter } = Astro.props;
 const filters = getLanguages(repos);
 ---
-{filter ? <div class="project-list-filters">
-    {
-        filters.map(lang=>(
-            <div class="project-list-badge filter"><span>{lang}</span></div>
-        ))
-    }
-</div> : null}
+
+{
+    filter ? (
+        <div class="project-list-filters">
+            {filters.map((lang) => (
+                <div class="project-list-badge filter">
+                    <span>{lang}</span>
+                </div>
+            ))}
+        </div>
+    ) : null
+}
 
 {
     repos.map((repo) => (
         <>
             <Card
-                
                 title={repo.name}
                 desc={repo.description}
                 url={repo.html_url}
@@ -31,36 +35,41 @@ const filters = getLanguages(repos);
 }
 
 <script>
-    const filters = document.querySelectorAll(".filter") as NodeListOf<HTMLElement>;
-    const cards = document.querySelectorAll(".card") as NodeListOf<HTMLElement>;
-    let selected:HTMLElement|null = null;
-    
-    filters.forEach(filter=>{
-        filter.addEventListener("click",function(){
-            if(this.classList.contains("project-list-badge-selected")){
-                this.classList.remove("project-list-badge-selected");
-                selected = null;
-                select(null);
-            }else{
-                this.classList.add("project-list-badge-selected")
-                selected?.classList.remove("project-list-badge-selected");
-                selected = this;
-                select(this.innerText);
-            }
-        })
-    })
+    document.addEventListener("astro:after-swap", () => {
+        const filters = document.querySelectorAll(
+            ".filter"
+        ) as NodeListOf<HTMLElement>;
+        const cards = document.querySelectorAll(
+            ".card"
+        ) as NodeListOf<HTMLElement>;
+        let selected: HTMLElement | null = null;
 
-    function select(lang:string|null){
-        cards.forEach(ele=>{
-            console.log(ele.dataset,lang)
-            if(ele.dataset.language === lang || lang === null){
-                ele.style.display = "block"
-            }else{
-                ele.style.display = "none"
-            }
-        })
-    }
-    
+        filters.forEach((filter) => {
+            filter.addEventListener("click", function () {
+                if (this.classList.contains("project-list-badge-selected")) {
+                    this.classList.remove("project-list-badge-selected");
+                    selected = null;
+                    select(null);
+                } else {
+                    this.classList.add("project-list-badge-selected");
+                    selected?.classList.remove("project-list-badge-selected");
+                    selected = this;
+                    select(this.innerText);
+                }
+            });
+        });
+
+        function select(lang: string | null) {
+            cards.forEach((ele) => {
+                console.log(ele.dataset, lang);
+                if (ele.dataset.language === lang || lang === null) {
+                    ele.style.display = "block";
+                } else {
+                    ele.style.display = "none";
+                }
+            });
+        }
+    });
 </script>
 
 <style lang="sass">
@@ -82,11 +91,11 @@ const filters = getLanguages(repos);
         cursor: pointer
         user-select: none
 
-        &:hover 
+        &:hover
             background-color: colors.$secondary
 
         &-selected span
-                background: -webkit-linear-gradient(135deg, colors.$font-color, colors.$primary)
-                -webkit-background-clip: text
-                -webkit-text-fill-color: transparent
+            background: -webkit-linear-gradient(135deg, colors.$font-color, colors.$primary)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
 </style>
