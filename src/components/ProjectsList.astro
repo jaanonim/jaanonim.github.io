@@ -35,7 +35,7 @@ const filters = getLanguages(repos);
 }
 
 <script>
-    document.addEventListener("astro:after-swap", () => {
+    document.addEventListener("astro:page-load", () => {
         const filters = document.querySelectorAll(
             ".filter"
         ) as NodeListOf<HTMLElement>;
