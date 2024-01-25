@@ -16,7 +16,8 @@
         "CSSSTeam/CSSSBackend",
         "Project-disABLEd/api",
         "Fundacyjni/backend",
-        "Dudek03/RaceArchitect"
+        "Dudek03/RaceArchitect",
+        "n2oneProgrammer/atari-logo-interpreter"
     ],
     "overwrite": {
         "n2oneProgrammer/PathOfDice": {
@@ -46,6 +47,9 @@
         },
         "jaanonim/obsidian-youversion-linker": {
             "language": "TypeScript"
+        },
+        "n2oneProgrammer/atari-logo-interpreter": {
+            "description": "Interpreter for Logo language created for competition Motorola Science Cup 2022."
         }
     },
     "top": [
