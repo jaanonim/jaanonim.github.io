@@ -7,7 +7,9 @@
         "jaanonim/email-service-backend",
         "jaanonim/email-service-frontend",
         "jaanonim/Hide-teams-in-meet-popup",
-        "jaanonim/obsidian-releases"
+        "jaanonim/obsidian-releases",
+        "jaanonim/nixos",
+        "jaanonim/nix-pkgs"
     ],
     "include": [
         "n2oneProgrammer/PathOfDice",
@@ -17,7 +19,8 @@
         "Project-disABLEd/api",
         "Fundacyjni/backend",
         "Dudek03/RaceArchitect",
-        "n2oneProgrammer/atari-logo-interpreter"
+        "n2oneProgrammer/atari-logo-interpreter",
+        "Kacper0510/project_cleaner"
     ],
     "overwrite": {
         "n2oneProgrammer/PathOfDice": {
