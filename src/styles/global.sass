@@ -1,7 +1,7 @@
 
 @use './colors.sass'
 
-html 
+html
     margin: 0
     padding: 0
     scroll-behavior: smooth
@@ -15,13 +15,13 @@ body
     background-color: colors.$background
     font-family: monospace
     font-size: 14px
-    overflow-x: hidden 
+    overflow-x: hidden
     display: flex
     flex-direction: column
 
 main
     flex: 1
-    
+
 .hero
     background-color: colors.$background
     width: 100vw
@@ -43,8 +43,6 @@ main
         @media (min-width: 660px)
             font-size: 5rem
 
-
-    
     &-description
         margin-top: 1rem
         font-size: 1rem
@@ -58,7 +56,8 @@ main
         align-items: center
         justify-content: center
         flex-direction: column
-
+        animation: fade-out 1ms both
+        animation-timeline: view(block 30% 30%)
 
         &-arrow
             display: block
@@ -66,7 +65,7 @@ main
             height: 2rem
             position: relative
             transition: all 0.5s ease-in-out
-            animation: arrow-anim 1s infinite 
+            animation: arrow-anim 1s infinite
 
             &::before
                 background-color: colors.$font-color
@@ -91,7 +90,6 @@ main
                 right: 0.43rem
                 transform: rotate(30deg)
                 border-bottom-left-radius: 0.1rem
-                
 
         &:hover &-arrow::before
             background: -webkit-linear-gradient(-90deg , colors.$font-color, colors.$primary)
@@ -110,7 +108,7 @@ main
     p
         line-height: 1.5rem
         width: clamp(30ch, 50%, 75ch)
-        margin: 2rem 0
+        margin: 4rem 0
         text-align: justify
 
 .button
@@ -126,50 +124,43 @@ main
 
 .button:hover
     background: rgba(0, 0, 0, 0.3)
-       
+
     span
         background: -webkit-linear-gradient(135deg, colors.$font-color, colors.$primary)
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
 
-
 .projects
-    background-color: colors.$background 
+    background-color: colors.$background
     min-height: 50vh
     &-title
-       text-align: center
-       font-size: 2rem
-       margin: 3rem 3.5rem 
+        text-align: center
+        font-size: 2rem
+        margin: 3rem 3.5rem
 
     &-center
         text-align: center
 
-
-
-::-webkit-scrollbar 
+::-webkit-scrollbar
     width: 0.7rem
 
-
-::-webkit-scrollbar-track 
+::-webkit-scrollbar-track
     background: rgba(0, 0, 0, 0.2)
 
-
-::-webkit-scrollbar-thumb 
+::-webkit-scrollbar-thumb
     background: rgba(255, 255, 255, 0.3)
 
-
-::-webkit-scrollbar-thumb:hover 
+::-webkit-scrollbar-thumb:hover
     background: rgba(255, 255, 255, 0.5)
-
 
 .about
     text-align: center
     min-height: 100vh
 
     &-title
-       text-align: center
-       font-size: 2rem
-       margin: 3rem 3.5rem 
+        text-align: center
+        font-size: 2rem
+        margin: 3rem 3.5rem
 
     &-comment
         font-size: 0.8rem
@@ -190,4 +181,3 @@ main
                 background: -webkit-linear-gradient(135deg, colors.$font-color, colors.$primary)
                 -webkit-background-clip: text
                 -webkit-text-fill-color: transparent
-

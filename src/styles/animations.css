@@ -1,17 +1,26 @@
 @keyframes arrow-anim {
-    0% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(0.2rem);
-    }
-    50% {
-        transform: translateY(0);
-    }
-    75% {
-        transform: translateY(-0.2rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.2rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-0.2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
