@@ -1,63 +1,80 @@
 {
-    "exclude": [
-        "jaanonim/jaanonim.github.io",
-        "jaanonim/jaanonim",
-        "jaanonim/SimpleHttp",
-        "jaanonim/OpenLP-songs",
-        "jaanonim/email-service-backend",
-        "jaanonim/email-service-frontend",
-        "jaanonim/Hide-teams-in-meet-popup",
-        "jaanonim/obsidian-releases",
-        "jaanonim/nixos",
-        "jaanonim/nix-pkgs"
-    ],
-    "include": [
-        "n2oneProgrammer/PathOfDice",
-        "Dudek03/GryllotalpaBot",
-        "n2oneProgrammer/sync_directories_app",
-        "CSSSTeam/CSSSBackend",
-        "Project-disABLEd/api",
-        "Fundacyjni/backend",
-        "Dudek03/RaceArchitect",
-        "n2oneProgrammer/atari-logo-interpreter",
-        "Kacper0510/project_cleaner"
-    ],
-    "overwrite": {
-        "n2oneProgrammer/PathOfDice": {
-            "description": "Simple logic game created during GMTK Game Jam 2022. The Player follows a path with a dice and tries to reach following levels."
-        },
-        "n2oneProgrammer/sync_directories_app": {
-            "description": "Windows app for synchronizing file between two folders."
-        },
-        "jaanonim/Stairs-Adventure": {
-            "language": "C#"
-        },
-        "CSSSTeam/CSSSBackend": {
-            "pushed_at": "2020-09-28T15:30:27Z"
-        },
-        "Project-disABLEd/api": {
-            "name": "disABLEd-backed"
-        },
-        "Fundacyjni/backend": {
-            "name": "Fundacyjni-backed",
-            "description": "Backed for Fundacyjni project"
-        },
-        "Dudek03/RaceArchitect": {
-            "description": "Race architect is a simple puzzle game made for GMTK Game Jam 2023. Instead of plating through the stage you build it"
-        },
-        "jaanonim/Rider": {
-            "language": "C#"
-        },
-        "jaanonim/obsidian-youversion-linker": {
-            "language": "TypeScript"
-        },
-        "n2oneProgrammer/atari-logo-interpreter": {
-            "description": "Interpreter for Logo language created for competition Motorola Science Cup 2022."
-        }
+  "exclude": [
+    "jaanonim/jaanonim.github.io",
+    "jaanonim/jaanonim",
+    "jaanonim/SimpleHttp",
+    "jaanonim/OpenLP-songs",
+    "jaanonim/email-service-backend",
+    "jaanonim/email-service-frontend",
+    "jaanonim/Hide-teams-in-meet-popup",
+    "jaanonim/obsidian-releases",
+    "jaanonim/stylix"
+  ],
+  "include": [
+    "n2oneProgrammer/PathOfDice",
+    "Dudek03/GryllotalpaBot",
+    "n2oneProgrammer/sync_directories_app",
+    "CSSSTeam/CSSSBackend",
+    "Project-disABLEd/api",
+    "Fundacyjni/backend",
+    "Dudek03/RaceArchitect",
+    "n2oneProgrammer/atari-logo-interpreter",
+    "Kacper0510/project_cleaner",
+    "DelaTrain/simulation"
+  ],
+  "overwrite": {
+    "n2oneProgrammer/PathOfDice": {
+      "description": "Simple logic game created during GMTK Game Jam 2022. The Player follows a path with a dice and tries to reach following levels."
     },
-    "top": [
-        "jaanonim/3d-game-engine-canvas",
-        "jaanonim/songbook",
-        "n2oneProgrammer/sync_directories_app"
-    ]
+    "n2oneProgrammer/sync_directories_app": {
+      "description": "Windows app for synchronizing file between two folders."
+    },
+    "jaanonim/Stairs-Adventure": {
+      "language": "C#"
+    },
+    "CSSSTeam/CSSSBackend": {
+      "pushed_at": "2020-09-28T15:30:27Z"
+    },
+    "Project-disABLEd/api": {
+      "name": "disABLEd-backed"
+    },
+    "DelaTrain/simulation": {
+      "name": "DelaTrain-simulation"
+    },
+    "Fundacyjni/backend": {
+      "name": "Fundacyjni-backed",
+      "description": "Backed for Fundacyjni project"
+    },
+    "Dudek03/RaceArchitect": {
+      "description": "Race architect is a simple puzzle game made for GMTK Game Jam 2023. Instead of plating through the stage you build it"
+    },
+    "jaanonim/Rider": {
+      "language": "C#"
+    },
+    "jaanonim/obsidian-youversion-linker": {
+      "language": "TypeScript"
+    },
+    "n2oneProgrammer/atari-logo-interpreter": {
+      "description": "Interpreter for Logo language created for competition Motorola Science Cup 2022."
+    },
+    "jaanonim/nixos": {
+      "description": "My personal NixOS configuration."
+    }
+  },
+  "top": [
+    "jaanonim/3d-game-engine-canvas",
+    "jaanonim/songbook",
+    "jaanonim/sql-games"
+  ],
+  "extra": [
+    {
+      "name": "gbur-lang",
+      "description": "A language designed to facilitate the definition of computational graphs compiled to C++ CUDA.",
+      "language": "Go",
+      "html_url": "https://gitlab.com/jaanonim-agh/tkik/gbur-lang",
+      "badge": [],
+      "has_pages": false,
+      "pushed_at": "2025-06-05T21:08:58Z"
+    }
+  ]
 }
