@@ -4,21 +4,29 @@ const today = new Date();
 ---
 
 <footer class="footer">
-    <Socials />
-    <div class="footer-credits">
-        Created with ❤ by Jaanonim
-        <br /> &copy; 2021 - {today.getFullYear()}
-    </div>
+  <Socials />
+  <div class="footer-credits">
+    Created with <span>❤</span> by Jaanonim
+    <br /> &copy; 2021 - {today.getFullYear()}
+  </div>
 </footer>
 
 <style lang="sass">
-    @use '../styles/colors.sass'
+  @use '../styles/colors.sass'
 
-    .footer
-        background-color: colors.$secondary
-        margin-top: 5rem
-        padding: 2rem
+  .footer
+    background-color: colors.$secondary
+    margin-top: 5rem
+    padding: 2rem
 
-        &-credits
-            text-align: center
+    &-credits
+      text-align: center
+
+      & span
+        transition: all 0.4s
+
+      &:hover span
+        color: red
+        transform: scale(1.75) translateY(-1px)
+        display: inline-block
 </style>
