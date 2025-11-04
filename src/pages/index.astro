@@ -8,37 +8,37 @@ const repos = await getTopRepos();
 ---
 
 <BaseLayout>
-    <header class="hero">
-        <div class="hero-title">Hey there 👋</div>
-        <div class="hero-subtitle">
-            I'm <AnimatedText text="Mateusz" />
-        </div>
-        <div class="hero-description">Just student for now</div>
-        <a class="hero-down" href="#scroll">
-            <span class="hero-down-arrow"></span>
-        </a>
-    </header>
-
-    <div class="description" id="scroll">
-        <p>
-            I am a student from Krakow. I'm interested in computer science. This
-            site was created as a kind of portfolio and as a repository of
-            projects that I have created or took a part in.
-        </p>
-        <a class="button" href="about">
-            <span>Read more</span>
-        </a>
+  <header class="hero">
+    <div class="hero-title">Hey there 👋</div>
+    <div class="hero-subtitle">
+      I'm <AnimatedText text="Mateusz" />
     </div>
+    <div class="hero-description">Just student for now</div>
+    <a class="hero-down" href="#scroll">
+      <span class="hero-down-arrow"></span>
+    </a>
+  </header>
 
-    <div class="projects">
-        <div class="projects-title">My most interesting projects:</div>
+  <div class="description" id="scroll">
+    <p>
+      I am a computer science student at the AGH University of Krakow. This site
+      was created as a kind of portfolio and as a repository of projects that I
+      have created or took a part in.
+    </p>
+    <a class="button" href="about">
+      <span>Read more</span>
+    </a>
+  </div>
 
-        <ProjectsList repos={repos} />
+  <div class="projects">
+    <div class="projects-title">My most interesting projects:</div>
 
-        <div class="projects-center">
-            <a class="button" href="projects">
-                <span>All projects</span>
-            </a>
-        </div>
+    <ProjectsList repos={repos} />
+
+    <div class="projects-center">
+      <a class="button" href="projects">
+        <span>All projects</span>
+      </a>
     </div>
+  </div>
 </BaseLayout>
